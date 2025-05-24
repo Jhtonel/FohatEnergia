@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sun, Battery, Zap } from "lucide-react";
 
 const openLeadsterChat = () => {
-    const avatar = document.querySelector('.nld-avatar');
-    if (avatar) avatar.click();
-  };
+  const avatar = document.querySelector('.nld-avatar');
+  if (avatar) avatar.click();
+};
 
 const Hero = () => {
   return (
     <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24 hero-pattern">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
-          <motion.div 
+          <motion.div
             className="md:w-1/2 mb-10 md:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -26,20 +26,22 @@ const Hero = () => {
               Transforme o Sol em <span className="gradient-text">Economia</span> para sua casa
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Reduza sua conta de luz em até 95% com nossas soluções em energia solar. 
+              Reduza sua conta de luz em até 95% com nossas soluções em energia solar.
               Investimento inteligente com retorno garantido.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#plans"><Button className="solar-gradient text-lg py-6 px-8">
-                Ver Planos <ArrowRight className="ml-2 h-5 w-5" />
-              </Button> <a/>
+              <a href="#plans">
+                <Button className="solar-gradient text-lg py-6 px-8">
+                  Ver Planos <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
               <Button onClick={openLeadsterChat} variant="outline" className="text-lg py-6 px-8 border-amber-500 text-amber-700">
                 Projeto Sob Medida Gratuito
               </Button>
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="md:w-1/2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,10 +50,10 @@ const Hero = () => {
             <div className="relative overflow-hidden">
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-amber-400 rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-amber-500 rounded-full opacity-20 animate-pulse"></div>
-              
+
               <div className="glass-card rounded-2xl overflow-hidden relative z-10">
-                <img  alt="Painéis solares instalados em telhado residencial" className="w-full h-auto rounded-t-2xl" src="public/House-hero.webp" />
-                
+                <img alt="Painéis solares instalados em telhado residencial" className="w-full h-auto rounded-t-2xl" src="public/House-hero.webp" />
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
@@ -60,7 +62,7 @@ const Hero = () => {
                     </div>
                     <span className="text-green-600 font-medium">Economize até 95%</span>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center">
                       <Battery className="h-5 w-5 text-amber-500 mr-2" />
