@@ -30,7 +30,7 @@ const Hero = () => {
               Investimento inteligente com retorno garantido.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#plans">
+              <a href="#Plans">
                 <Button className="solar-gradient text-lg py-6 px-8">
                   Ver Planos <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
