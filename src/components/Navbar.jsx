@@ -4,6 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const openLeadsterChat = () => {
+    const avatar = document.querySelector('.nld-avatar');
+    if (avatar) avatar.click();
+  };
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -98,7 +103,7 @@ const Navbar = () => {
                     {link.name}
                   </a>
                 ))}
-                <Button className="solar-gradient w-full">Fale Conosco</Button>
+                <Button onClick={openLeadsterChat} className="solar-gradient w-full">Fale Conosco</Button>
               </nav>
             </div>
           </motion.div>

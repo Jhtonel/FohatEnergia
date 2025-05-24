@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sun, Battery, Zap } from "lucide-react";
 
+const openLeadsterChat = () => {
+    const avatar = document.querySelector('.nld-avatar');
+    if (avatar) avatar.click();
+  };
+
 const Hero = () => {
   return (
     <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24 hero-pattern">
@@ -25,10 +30,10 @@ const Hero = () => {
               Investimento inteligente com retorno garantido.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="solar-gradient text-lg py-6 px-8">
+              <a href="#plans"><Button className="solar-gradient text-lg py-6 px-8">
                 Ver Planos <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" className="text-lg py-6 px-8 border-amber-500 text-amber-700">
+              </Button> <a/>
+              <Button onClick={openLeadsterChat} variant="outline" className="text-lg py-6 px-8 border-amber-500 text-amber-700">
                 Projeto Sob Medida Gratuito
               </Button>
             </div>
