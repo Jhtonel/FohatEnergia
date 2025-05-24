@@ -1,0 +1,25 @@
+Options -MultiViews
+RewriteEngine On
+
+# Proper MIME types for all files
+AddType application/javascript .js
+AddType application/javascript .mjs
+AddType text/javascript .js
+AddType text/javascript .mjs
+
+# GZIP compression for text files
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+</IfModule>
+
+# Set security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' data: https:; font-src 'self' data: https:;"
+</IfModule>
+
+# Redirect all requests to dist directory
+RewriteCond %{REQUEST_URI} !^/dist/
+RewriteRule ^(.*)$ dist/$1 [L] 
