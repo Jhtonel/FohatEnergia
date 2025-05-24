@@ -184,12 +184,24 @@ logger.error = (msg, options) => {
 export default defineConfig({
 	customLogger: logger,
 	plugins: [react(), addTransformIndexHtml],
+	base: './',
 	server: {
 		cors: true,
 		headers: {
 			'Cross-Origin-Embedder-Policy': 'credentialless',
 		},
 		allowedHosts: true,
+	},
+	build: {
+		outDir: 'dist',
+		assetsDir: 'assets',
+		emptyOutDir: true,
+		sourcemap: false,
+		rollupOptions: {
+			output: {
+				manualChunks: undefined
+			}
+		}
 	},
 	resolve: {
 		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json', ],
