@@ -3,6 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, DollarSign, Leaf, Clock, Shield, BarChart } from "lucide-react";
 
+const openLeadsterChat = () => {
+  const avatar = document.querySelector('.nld-avatar');
+  if (avatar) avatar.click();
+};
+
 const Benefits = () => {
   const benefits = [
     {
@@ -102,7 +107,7 @@ const Benefits = () => {
             Faça uma simulação gratuita e descubra quanto você pode economizar com energia solar.
             Nossos consultores estão prontos para ajudar você a encontrar a melhor solução.
           </p>
-          <button className="bg-white text-amber-600 font-medium py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+          <button onClick={openLeadsterChat} className="bg-white text-amber-600 font-medium py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
             Fazer Simulação Gratuita
           </button>
         </motion.div>
