@@ -9,3 +9,8 @@
 <IfModule mod_headers.c>
   Header set X-Powered-By "Hostinger Horizons"
 </IfModule>
+
+<IfModule mod_speling.c>
+  CheckCaseOnly off
+  CheckSpelling off
+</IfModule>
