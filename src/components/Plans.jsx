@@ -4,7 +4,6 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
-import { openLeadsterChat } from "@/utils/leadster";
 
 const Plans = () => {
   const residentialPlans = [
@@ -18,6 +17,11 @@ const Plans = () => {
     { name: "Empresarial Plus", description: "Para médias empresas", price: "R$ 69.990", monthly: "R$ 999", features: [{ included: true, text: "Até 20 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 1 ano" }], popular: true, className: "pricing-popular" },
     { name: "Empresarial Premium", description: "Para grandes empresas", price: "R$ 99.990", monthly: "R$ 1.499", features: [{ included: true, text: "Até 50 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 3 anos" }], popular: false, className: "pricing-premium" }
   ];
+
+  const openLeadsterChat = () => {
+    const avatar = document.querySelector('.nld-avatar');
+    if (avatar) avatar.click();
+  };
 
   const renderPlanCards = (plans) => {
     return plans.map((plan, index) => (

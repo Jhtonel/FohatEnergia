@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, DollarSign, Leaf, Clock, Shield, BarChart } from "lucide-react";
-import { openLeadsterChat } from "@/utils/leadster";
+
+const openLeadsterChat = () => {
+  const avatar = document.querySelector('.nld-avatar');
+  if (avatar) avatar.click();
+};
 
 const Benefits = () => {
   const benefits = [

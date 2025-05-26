@@ -2,7 +2,11 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sun, Battery, Zap } from "lucide-react";
-import { openLeadsterChat } from "@/utils/leadster";
+
+const openLeadsterChat = () => {
+  const avatar = document.querySelector('.nld-avatar');
+  if (avatar) avatar.click();
+};
 
 const Hero = () => {
   return (

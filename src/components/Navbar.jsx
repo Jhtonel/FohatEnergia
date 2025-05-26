@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { openLeadsterChat } from "@/utils/leadster";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const openLeadsterChat = () => {
+    const avatar = document.querySelector('.nld-avatar');
+    if (avatar) avatar.click();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
