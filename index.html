@@ -13,7 +13,7 @@
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-PTBX4T77');</script>
-	<script>
+	<script id="leadster-script">
 		(function (a, b, c, d) { 
 			try { 
 				console.log('Iniciando carregamento do Leadster...');
@@ -25,6 +25,8 @@
 				a.neuroleadId = d; 
 				f.onload = function() {
 					console.log('Script do Leadster carregado com sucesso!');
+					// Dispara um evento quando o Leadster estiver carregado
+					a.dispatchEvent(new Event('leadsterLoaded'));
 				};
 				f.onerror = function(error) {
 					console.error('Erro ao carregar script do Leadster:', error);
