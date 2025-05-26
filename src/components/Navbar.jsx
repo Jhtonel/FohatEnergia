@@ -1,17 +1,22 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const openLeadsterChat = () => {
-    const avatar = document.querySelector('.nld-avatar');
-    if (avatar) avatar.click();
-  };
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const openLeadsterChat = () => {
+    if (typeof window !== 'undefined') {
+      const avatar = document.querySelector('.nld-avatar');
+      if (avatar) {
+        avatar.click();
+      } else {
+        console.log('Elemento .nld-avatar não encontrado');
+      }
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +69,13 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button onClick={openLeadsterChat} className="solar-gradient">Fale Conosco</Button>
+            <Button 
+              onClick={() => openLeadsterChat()} 
+              className="solar-gradient"
+              type="button"
+            >
+              Fale Conosco
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -103,7 +114,13 @@ const Navbar = () => {
                     {link.name}
                   </a>
                 ))}
-                <Button onClick={openLeadsterChat} className="solar-gradient w-full">Fale Conosco</Button>
+                <Button 
+                  onClick={() => openLeadsterChat()} 
+                  className="solar-gradient w-full"
+                  type="button"
+                >
+                  Fale Conosco
+                </Button>
               </nav>
             </div>
           </motion.div>
