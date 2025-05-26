@@ -64,7 +64,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="solar-gradient">Fale Conosco</Button>
+            <Button onClick={openLeadsterChat} className="solar-gradient">Fale Conosco</Button>
           </nav>
 
           {/* Mobile Menu Button */}
