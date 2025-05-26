@@ -8,13 +8,20 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const openLeadsterChat = () => {
+    console.log('Botão Fale Conosco clicado');
     if (typeof window !== 'undefined') {
+      console.log('Procurando elemento .nld-avatar...');
       const avatar = document.querySelector('.nld-avatar');
       if (avatar) {
+        console.log('Elemento .nld-avatar encontrado, clicando...');
         avatar.click();
       } else {
-        console.log('Elemento .nld-avatar não encontrado');
+        console.error('Elemento .nld-avatar não encontrado. Verificando outros elementos do Leadster...');
+        const allLeadsterElements = document.querySelectorAll('[class*="nld"]');
+        console.log('Elementos do Leadster encontrados:', allLeadsterElements);
       }
+    } else {
+      console.error('Window não está definido');
     }
   };
 
