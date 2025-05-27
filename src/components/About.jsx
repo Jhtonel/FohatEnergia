@@ -80,7 +80,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <img alt="Técnicos instalando painéis solares" className="rounded-xl shadow-lg" src="https://images.unsplash.com/photo-1682341847717-ce25b56f08ed" />
+            <img alt="Técnicos instalando painéis solares" className="rounded-xl shadow-lg" src="/public/Sunset.webp" />
           </motion.div>
           
           <motion.div

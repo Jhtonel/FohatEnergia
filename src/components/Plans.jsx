@@ -7,15 +7,15 @@ import { Check, X } from "lucide-react";
 
 const Plans = () => {
   const residentialPlans = [
-    { name: "Básico", description: "Ideal para residências pequenas, até R$200", price: "R$ 8.990", monthly: "R$ 299", features: [{ included: true, text: "Até 2 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: false, text: "Manutenção preventiva" }], popular: false, className: "border-neutral-light" },
-    { name: "Avançado", description: "Perfeito para a maioria das residências", price: "R$ 14.990", monthly: "R$ 499", features: [{ included: true, text: "Até 4 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: false, text: "Manutenção preventiva" }], popular: true, className: "border-secondary" },
-    { name: "Premium", description: "Para residências de alto consumo", price: "R$ 29.990", monthly: "R$ 699", features: [{ included: true, text: "Até 8 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 2 anos" }], popular: false, className: "border-primary" }
+    { name: "Baixo Consumo", description: "Ideal para quem gasta entre R$200 e R$300 por mês", price: "R$ 8.990", monthly: "R$ 299", features: [{ included: true, text: "Até R$300 por mês" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: false, text: "Manutenção preventiva" }], popular: false, className: "border-neutral-light" },
+    { name: "Consumo Médio", description: "Ideal para quem gasta entre R$300 e R$600 por mês", price: "R$ 14.990", monthly: "R$ 499", features: [{ included: true, text: "Até R$600 por mês" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: false, text: "Manutenção preventiva" }], popular: true, className: "border-secondary" },
+    { name: "Alto Padrão", description: "Ideal para quem gasta acima de R$600 por mês", price: "R$ 24.990", monthly: "R$ 699", features: [{ included: true, text: "Acima de R$600 por mês" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 2 anos" }], popular: false, className: "border-primary" }
   ];
 
   const commercialPlans = [
-    { name: "Empresarial Básico", description: "Para pequenas empresas", price: "R$ 39.990", monthly: "R$ 799", features: [{ included: true, text: "Até 10 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: false, text: "Manutenção preventiva" }], popular: false, className: "border-neutral-light" },
-    { name: "Empresarial Plus", description: "Para médias empresas", price: "R$ 69.990", monthly: "R$ 999", features: [{ included: true, text: "Até 20 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 1 ano" }], popular: true, className: "border-secondary" },
-    { name: "Empresarial Premium", description: "Para grandes empresas", price: "R$ 99.990", monthly: "R$ 1.499", features: [{ included: true, text: "Até 50 kWp de potência" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 3 anos" }], popular: false, className: "border-primary" }
+    { name: "Empresarial Básico", description: "Para empresas que gastam até R$1.000 por mês", price: "R$ 29.990", monthly: "R$ 799", features: [{ included: true, text: "Até R$1.000 por mês" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: false, text: "Manutenção preventiva" }], popular: false, className: "border-neutral-light" },
+    { name: "Empresarial Plus", description: "Para empresas que gastam até R$2.000 por mês", price: "R$ 59.990", monthly: "R$ 999", features: [{ included: true, text: "Até R$2.000 por mês" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 1 ano" }], popular: true, className: "border-secondary" },
+    { name: "Empresarial Premium", description: "Para grandes empresas, acima de R$2.000 por mês", price: "119.990", monthly: "R$ 1.499", features: [{ included: true, text: "Acima de R$2.000 por mês" }, { included: true, text: "Economia de até 95% na conta" }, { included: true, text: "Instalação inclusa" }, { included: true, text: "Monitoramento via aplicativo" }, { included: true, text: "Manutenção preventiva por 3 anos" }], popular: false, className: "border-primary" }
   ];
 
   const openLeadsterChat = () => {
@@ -140,7 +140,7 @@ const Plans = () => {
             className="border-2 border-primary text-primary hover:bg-primary/10 font-bold shadow-lg hover:shadow-xl transition-all" 
             onClick={openLeadsterChat}
           >
-            Solicitar Orçamento Personalizado
+            Simular Economia Gratuitamente
           </Button>
         </div>
       </div>

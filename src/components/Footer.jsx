@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <img src="public/solar-icon.svg" alt="Logo" className="h-10 w-10 mr-2" />
+              <img src="public/solar-icon.svg" alt="Logo" className="h-14 w-20 mr-2" />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Transformando a energia do sol em economia para sua casa ou empresa. 
