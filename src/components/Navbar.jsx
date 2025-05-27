@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-          <img src="/solar-icon.svg" alt="Logo" className="h-16 w-28 mr-2"/>
+            <img src="/solar-icon.svg" alt="Logo" className="h-16 w-28 mr-2"/>
           </div>
 
           {/* Desktop Navigation */}
@@ -58,16 +58,12 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-amber-500 transition-colors font-medium"
+                className="text-text-primary hover:text-secondary transition-colors font-medium"
               >
                 {link.name}
               </a>
             ))}
-            <Button 
-              onClick={() => openLeadsterChat()} 
-              className="solar-gradient"
-              type="button"
-            >
+            <Button onClick={openLeadsterChat} className="primary-gradient text-text-white">
               Fale Conosco
             </Button>
           </nav>
@@ -79,6 +75,7 @@ const Navbar = () => {
               size="icon"
               onClick={toggleMenu}
               aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+              className="text-primary"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -94,7 +91,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white"
+            className="md:hidden bg-background-light"
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
@@ -102,16 +99,15 @@ const Navbar = () => {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="text-gray-700 hover:text-amber-500 transition-colors font-medium py-2"
+                    className="text-text-primary hover:text-secondary transition-colors font-medium py-2"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
                   </a>
                 ))}
                 <Button 
-                  onClick={() => openLeadsterChat()} 
-                  className="solar-gradient w-full"
-                  type="button"
+                  onClick={openLeadsterChat} 
+                  className="primary-gradient text-text-white w-full"
                 >
                   Fale Conosco
                 </Button>

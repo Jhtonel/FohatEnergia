@@ -17,19 +17,40 @@ module.exports = {
 		},
 		extend: {
 			colors: {
+				// Cores principais
+				primary: {
+					DEFAULT: '#134E4A', // Verde escuro
+					light: '#40AFA8',   // Verde claro/mint para contraste
+				},
+				secondary: {
+					DEFAULT: '#584304', // Amarelo/dourado
+					light: '#FFBC00',   // Amarelo claro
+				},
+				// Cores neutras
+				neutral: {
+					dark: '#3F3F3F',    // Cinza escuro
+					brown: '#544C3F',   // Marrom acinzentado
+					light: '#E5E5E5',   // Cinza claro
+				},
+				// Cores de background
+				background: {
+					primary: '#134E4A',  // Verde escuro
+					secondary: '#584304', // Marrom/dourado
+					light: '#FFFFFF',    // Branco
+					dark: '#3F3F3F',     // Cinza escuro
+				},
+				// Cores de texto
+				text: {
+					primary: '#134E4A',   // Verde escuro
+					secondary: '#584304', // Amarelo/dourado
+					light: '#40AFA8',    // Verde claro/mint
+					white: '#FFFFFF',    // Branco
+					dark: '#3F3F3F',     // Cinza escuro
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))',
-				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))',
