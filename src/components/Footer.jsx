@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 
@@ -18,8 +17,8 @@ const Footer = () => {
     {
       title: "Produtos",
       links: [
-        { name: "Residencial", href: "#plans" },
-        { name: "Empresarial", href: "#plans" },
+        { name: "Residencial", href: "#projects" },
+        { name: "Empresarial", href: "#projects" },
         { name: "Rural", href: "#" },
         { name: "Condomínios", href: "#" }
       ]

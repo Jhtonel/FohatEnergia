@@ -1,9 +1,8 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Plans from "@/components/Plans";
+import Projects from "@/components/Projects";
 import Benefits from "@/components/Benefits";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -18,7 +17,7 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Plans />
+        <Projects />
         <Benefits />
         <FAQ />
         <Contact />
